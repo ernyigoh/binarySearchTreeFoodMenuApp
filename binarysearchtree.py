@@ -11,6 +11,7 @@ class foodMenu:
         self.foodDetails = [foodName, foodPrice]
         
     def addNode(self, name, price):
+        print(name, price)
         try:
             if name == self.foodDetails[0]:
                 return # node already exist
