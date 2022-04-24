@@ -5,7 +5,7 @@ import pandas as pd
 # if 'hasFood' not in st.session_state:
 #     st.session_state.hasFood = 0
 
-st.session_state.RBAFoodMenu = foodMenu()
+st.session_state.RBAFoodMenu = foodMenu.oriMenu()
 st.session_state.hasFood = 1
     
 st.header("Welcome to ABC Simple Food Menu Demo")
