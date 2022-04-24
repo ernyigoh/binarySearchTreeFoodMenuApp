@@ -33,9 +33,9 @@ class foodMenu:
 
         except:
             if self.rightChildNode:
-                    self.rightChildNode.addNode(name, price)
-                else:
-                    self.rightChildNode = foodMenu(name, price)
+                self.rightChildNode.addNode(name, price)
+            else:
+                self.rightChildNode = foodMenu(name, price)
 
     def findNode(self, name):
         
