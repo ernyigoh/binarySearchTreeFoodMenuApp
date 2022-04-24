@@ -7,7 +7,7 @@ class foodMenu:
         self.rightChildNode = None
         
     def __init__(self):
-        self.foodDetails = [('Spaghetti Carbonara', 18.9), ('Latte', 6.8)]
+        self.foodDetails = [('Spaghetti Carbonara', 18.9)], [('Latte', 6.8)]
         self.leftChildNode = None
         self.rightChildNode = None
         
