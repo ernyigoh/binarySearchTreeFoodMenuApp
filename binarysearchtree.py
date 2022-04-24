@@ -1,39 +1,28 @@
 class foodMenu:
 
     
-    def __init__(self, foodName=None, foodPrice=None):
+    def __init__(self, foodName, foodPrice):
         self.leftChildNode = None
         self.rightChildNode = None
-        if(foodName == None):
-            self.foodDetails = []
-            self.addNode('Spaghetti Carbonara', 18.9)
-            self.addNode('Latte', 6.9)
         self.foodDetails = [foodName, foodPrice]
         
     def addNode(self, name, price):
-        print(name, price)
-        try:
-            if name == self.foodDetails[0]:
-                return # node already exist
-        
-            if name < self.foodDetails[0]:
-                if self.leftChildNode:
-                    self.leftChildNode.addNode(name, price)
-                else:
-                    self.leftChildNode = foodMenu(name, price)
+        if name == self.foodDetails[0]:
+            return # node already exist
 
-
+        if name < self.foodDetails[0]:
+            if self.leftChildNode:
+                self.leftChildNode.addNode(name, price)
             else:
-                if self.rightChildNode:
-                    self.rightChildNode.addNode(name, price)
-                else:
-                    self.rightChildNode = foodMenu(name, price)
+                self.leftChildNode = foodMenu(name, price)
 
-        except:
+
+        else:
             if self.rightChildNode:
                 self.rightChildNode.addNode(name, price)
             else:
                 self.rightChildNode = foodMenu(name, price)
+                    
 
     def findNode(self, name):
         
