@@ -2,13 +2,13 @@ class foodMenu:
 
     
     def __init__(self, foodName=None, foodPrice=None):
+        self.leftChildNode = None
+        self.rightChildNode = None
         if(foodName == None):
             self.foodDetails = []
             self.addNode('Spaghetti Carbonara', 18.9)
             self.addNode('Latte', 6.9)
         self.foodDetails = [foodName, foodPrice]
-        self.leftChildNode = None
-        self.rightChildNode = None
         
     def addNode(self, name, price):
         try:
