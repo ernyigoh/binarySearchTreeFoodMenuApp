@@ -5,7 +5,7 @@ import pandas as pd
 if 'hasFood' not in st.session_state:
     st.session_state.hasFood = 0
     
-st.header("Welcome to ABC Simple Food Menu Demo")
+st.header("Welcome to Ern Yi's Simple Food Menu Demo")
 
 readme = st.checkbox("readme first")
 
