@@ -6,7 +6,7 @@ class foodMenu:
         self.leftChildNode = None
         self.rightChildNode = None
         
-    def __init__(self):
+    def oriMenu(self):
         self.foodDetails = []
         self.leftChildNode = None
         self.rightChildNode = None
