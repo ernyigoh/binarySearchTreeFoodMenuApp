@@ -7,9 +7,11 @@ class foodMenu:
         self.rightChildNode = None
         
     def __init__(self):
-        self.foodDetails = ['Spaghetti Carbonara', 18.9]
+        self.foodDetails = []
         self.leftChildNode = None
         self.rightChildNode = None
+        self.addNode('Spaghetti Carbonara', 18.9)
+        self.addNode('Latte', 6.9)
         
     def addNode(self, name, price):
         if name == self.foodDetails[0]:
