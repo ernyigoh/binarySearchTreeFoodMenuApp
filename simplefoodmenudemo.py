@@ -44,7 +44,7 @@ if option == 'Add a food':
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
             
             else:
-                st.session_state.RBAFoodMenu = foodMenu(foodPrice=foodName,foodPrice=foodPrice)
+                st.session_state.RBAFoodMenu = foodMenu(foodName=foodName,foodPrice=foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
                 st.session_state.hasFood = 1
 
