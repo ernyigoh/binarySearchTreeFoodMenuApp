@@ -1,17 +1,14 @@
 class foodMenu:
 
     
-    def __init__(self, foodName, foodPrice):
+    def __init__(self, foodName=None, foodPrice=None):
+        if(foodName == None):
+            self.foodDetails = []
+            self.addNode('Spaghetti Carbonara', 18.9)
+            self.addNode('Latte', 6.9)
         self.foodDetails = [foodName, foodPrice]
         self.leftChildNode = None
         self.rightChildNode = None
-        
-    def oriMenu(self):
-        self.foodDetails = []
-        self.leftChildNode = None
-        self.rightChildNode = None
-        self.addNode('Spaghetti Carbonara', 18.9)
-        self.addNode('Latte', 6.9)
         
     def addNode(self, name, price):
         try:
