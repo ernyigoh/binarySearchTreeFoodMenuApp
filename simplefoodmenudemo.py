@@ -5,7 +5,9 @@ import pandas as pd
 if 'hasFood' not in st.session_state:
     st.session_state.hasFood = 0
 
-
+st.session_state.RBAFoodMenu.addNode('Latte',6.80)
+st.session_state.RBAFoodMenu.addNode('Spaghetti Carbonara',18.90)
+    
 st.header("Welcome to ABC Simple Food Menu Demo")
 
 readme = st.checkbox("readme first")
