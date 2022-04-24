@@ -17,22 +17,25 @@ class foodMenu:
         try:
             if name == self.foodDetails[0]:
                 return # node already exist
-        except:
-            pass
         
-        if name < self.foodDetails[0]:
-            if self.leftChildNode:
-                self.leftChildNode.addNode(name, price)
-            else:
-                self.leftChildNode = foodMenu(name, price)
+            if name < self.foodDetails[0]:
+                if self.leftChildNode:
+                    self.leftChildNode.addNode(name, price)
+                else:
+                    self.leftChildNode = foodMenu(name, price)
 
-            
-        else:
+
+            else:
+                if self.rightChildNode:
+                    self.rightChildNode.addNode(name, price)
+                else:
+                    self.rightChildNode = foodMenu(name, price)
+
+        except:
             if self.rightChildNode:
-                self.rightChildNode.addNode(name, price)
-            else:
-                self.rightChildNode = foodMenu(name, price)
-
+                    self.rightChildNode.addNode(name, price)
+                else:
+                    self.rightChildNode = foodMenu(name, price)
 
     def findNode(self, name):
         
