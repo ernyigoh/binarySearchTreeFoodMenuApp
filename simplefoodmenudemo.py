@@ -2,8 +2,8 @@ import streamlit as st
 from binarysearchtree import foodMenu
 import pandas as pd
 
-if 'hasFood' not in st.session_state:
-    st.session_state.hasFood = 0
+# if 'hasFood' not in st.session_state:
+#     st.session_state.hasFood = 0
 
 st.session_state.hasFood = 1
 st.session_state.RBAFoodMenu = foodMenu('Latte',6.80)
