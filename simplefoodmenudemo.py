@@ -39,15 +39,15 @@ if option == 'Add a food':
 
         if foodName != "" and foodPrice !="":
 
-            if st.session_state.hasFood==1:
+#             if st.session_state.hasFood==1:
 
-                st.session_state.RBAFoodMenu.addNode(foodName,foodPrice)
-                st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
+#                 st.session_state.RBAFoodMenu.addNode(foodName,foodPrice)
+#                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
             
-            else:
-                st.session_state.RBAFoodMenu = foodMenu(foodName,foodPrice)
-                st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
-                st.session_state.hasFood = 1
+#             else:
+            st.session_state.RBAFoodMenu = foodMenu(foodName,foodPrice)
+            st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
+            st.session_state.hasFood = 1
 
         else:
             st.write("Please fill in the details first. ")
