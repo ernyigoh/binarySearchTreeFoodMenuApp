@@ -14,9 +14,11 @@ class foodMenu:
         self.addNode('Latte', 6.9)
         
     def addNode(self, name, price):
-        if name == self.foodDetails[0]:
-            return # node already exist
-
+        try:
+            if name == self.foodDetails[0]:
+                return # node already exist
+        except:
+            pass
         
         if name < self.foodDetails[0]:
             if self.leftChildNode:
